@@ -1,7 +1,7 @@
 // models/customers.js
 import mongoose from 'mongoose';
 
-// Create the schema for the customer model
+// Schema for the customer model
 const customerSchema = new mongoose.Schema({
   name: {
     type: String,

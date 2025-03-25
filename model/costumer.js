@@ -9,5 +9,5 @@ const customerSchema = new mongoose.Schema({
 // Make the model
 const Customer = mongoose.model('Customer', customerSchema);
 
-// Export it so we can use it elsewhere
+// Export it so can use it elsewhere
 module.exports = Customer;

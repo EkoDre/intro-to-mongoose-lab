@@ -15,7 +15,7 @@ console.log("  5. Quit\n");
 // Step 4: Ask the user what they want to do
 const choice = prompt("Number of action to run: ");
 
-// Step 5: Handle their choice (for now just print what they picked)
+// Step 5: Handle their choice (print what they picked)
 if (choice === '1') {
   console.log("You chose to CREATE a customer");
 } else if (choice === '2') {
@@ -29,3 +29,5 @@ if (choice === '1') {
 } else {
   console.log(" Invalid choice. Please run the program again.");
 }
+
+mongoose.connect(process.env.MONGO_URI)

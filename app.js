@@ -1,12 +1,17 @@
-require('dotenv').config(); // Load environment variables from .env
-const mongoose = require('mongoose'); // MongoDB library
-const prompt = require('prompt-sync')(); // Used to get input from user
-const Customer = require('./models/Customer'); // Customer model
+import dotenv from 'dotenv';
+dotenv.config(); // ✅ Load .env variables
+
+import mongoose from 'mongoose';
+import promptSync from 'prompt-sync'; // Import it first
+const prompt = promptSync(); // Then use it
+
+import Customer from './models/Customer.js';
+
+
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
+ 
 })
 .then(() => {
   console.log("Connected to MongoDB");

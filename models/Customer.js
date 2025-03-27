@@ -1,4 +1,5 @@
-const mongoose = require('mongoose');
+
+import mongoose from 'mongoose';
 
 // Define the schema (structure)
 const customerSchema = new mongoose.Schema({
@@ -9,5 +10,5 @@ const customerSchema = new mongoose.Schema({
 // Make the model
 const Customer = mongoose.model('Customer', customerSchema);
 
-// Export it so can use it elsewhere
-module.exports = Customer;
+// Export it the ES Module way
+export default Customer;
